@@ -1,0 +1,54 @@
+/* Design tokens (§10.2). */
+:root {
+  /* brand */
+  --color-primary: #ff5a3c;
+  --color-primary-dark: #d63f23;
+  --color-secondary: #2ec4f1;
+  --color-accent: #ffc933;
+  --color-success: #3dd68c;
+  --color-nitro: #9b5cff;
+  --color-drift: #ff9f1c;
+  --color-danger: #ff4d6d;
+
+  /* surfaces */
+  --color-bg: #fff8ee;
+  --color-panel: #ffffff;
+  --color-panel-alt: #f3ecff;
+  --color-ink: #2b2340;
+  --color-ink-soft: #6b6385;
+  --color-outline: #2b2340;
+
+  /* typography */
+  --font-display: 'Fredoka', 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* sizing */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --border-thick: 3px;
+
+  /* "toy" shadow: hard offset, no blur */
+  --shadow-toy: 0 6px 0 var(--color-outline);
+  --shadow-toy-pressed: 0 2px 0 var(--color-outline);
+  --shadow-soft: 0 8px 24px rgba(43, 35, 64, 0.15);
+
+  /* motion */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+
+  /* spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}

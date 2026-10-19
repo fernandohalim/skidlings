@@ -1,0 +1,40 @@
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms linear;
+  /* keep the middle of the screen clear (§10.5) */
+  mask-image: radial-gradient(ellipse at center, transparent 38%, black 70%);
+}
+
+/* Each streak sits on a ray from the center and races outward along it. */
+.line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--len);
+  height: 3px;
+  margin-top: -1.5px;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9));
+  border-radius: 2px;
+  animation-name: streak;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes streak {
+  from {
+    transform: rotate(var(--a)) translateX(28vmin);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    transform: rotate(var(--a)) translateX(75vmin);
+    opacity: 0;
+  }
+}
